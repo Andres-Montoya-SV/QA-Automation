@@ -7,10 +7,13 @@ describe("Focus Services test", () => {
     await GooglePage.open();
     await GooglePage.search("Focus Services");
 
-    assert(
-      await FocusServicesPage.focusServicesLink.isDisplayed(),
+    const focusServicesLink = await FocusServicesPage.findFocusServicesLink();
+    assert.ok(
+      focusServicesLink,
       "Focus Services link not found in search results"
     );
+    await focusServicesLink.click();
+
     await FocusServicesPage.focusServicesLink.click();
 
     await FocusServicesPage.scrollToBottom();

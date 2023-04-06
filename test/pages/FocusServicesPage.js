@@ -29,6 +29,21 @@ class FocusServicesPage {
   get asiaLocationText() {
     return $("*=Bacolod City, Philippines");
   }
+
+  async clickFocusServicesLink() {
+    await (await this.focusServicesLink).click();
+  }
+
+  async findFocusServicesLink() {
+    const searchResults = await $$("a[href]");
+    for (const result of searchResults) {
+      const href = await result.getAttribute("href");
+      if (href === "https://www.focusservices.com/") {
+        return result;
+      }
+    }
+    return null;
+  }
 }
 
 module.exports = new FocusServicesPage();
