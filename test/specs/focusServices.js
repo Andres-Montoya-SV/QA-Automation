@@ -14,8 +14,6 @@ describe("Focus Services test", () => {
     );
     await focusServicesLink.click();
 
-    await FocusServicesPage.focusServicesLink.click();
-
     await FocusServicesPage.scrollToBottom();
 
     assert(

@@ -5,26 +5,25 @@ class FocusServicesPage {
     });
   }
 
-  get focusServicesLink() {
-    return $('a[href="https://www.focusservices.com"]');
-  }
   get nowHiringBtn() {
-    return $('a[href="/careers"]');
+    return $("#text-4 > div > p > a");
   }
   get locationsTab() {
-    return $('a[href="/locations"]');
+    return $("#menu-item-4726 > a > span.avia-menu-text");
   }
   get northAmericaLink() {
-    return $('a[href="/locations/north-america"]');
+    return $(
+      "#av-tab-section-1 > div > div.av-tab-section-tab-title-container.avia-tab-title-padding-small > a.av-section-tab-title.av-tab-no-icon.av-tab-with-image.noHover.av-active-tab-title"
+    );
   }
   get centralAmericaLink() {
-    return $('a[href="/locations/central-america"]');
+    return $('#av-tab-section-1 > div > div.av-tab-section-tab-title-container.avia-tab-title-padding-small > a:nth-child(2)');
   }
   get centralAmericaTitle() {
-    return $("h1=El Salvador & Nicaragua");
+    return $("h2=El Salvador & Nicaragua");
   }
   get asiaLink() {
-    return $('a[href="/locations/asia"]');
+    return $('#av-tab-section-1 > div > div.av-tab-section-tab-title-container.avia-tab-title-padding-small > a:nth-child(3)');
   }
   get asiaLocationText() {
     return $("*=Bacolod City, Philippines");
