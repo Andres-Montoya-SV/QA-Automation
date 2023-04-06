@@ -13,7 +13,7 @@ This project contains automated tests for the Focus Services website using Webdr
 
 Make sure you have the following installed on your system:
 
-- [Node.js](https://nodejs.org/en/download/) (version 14 or later)
+- [Node.js](https://nodejs.org/en/download/) (version 16 or later)
 - [npm](https://www.npmjs.com/get-npm) (included with Node.js)
 
 ## Installation
