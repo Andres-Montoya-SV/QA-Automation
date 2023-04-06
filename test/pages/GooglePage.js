@@ -4,8 +4,9 @@ class GooglePage {
   }
 
   async search(query) {
+    await (await this.searchInput).waitForDisplayed({ timeout: 10000 });
     await (await this.searchInput).setValue(query);
-    await (await this.searchBtn).waitForClickable();
+    await (await this.searchBtn).waitForClickable({ timeout: 10000 });
     await (await this.searchBtn).click();
   }
 
