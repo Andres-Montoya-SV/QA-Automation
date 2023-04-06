@@ -5,6 +5,7 @@ class GooglePage {
 
   async search(query) {
     await (await this.searchInput).setValue(query);
+    await (await this.searchBtn).waitForClickable();
     await (await this.searchBtn).click();
   }
 
